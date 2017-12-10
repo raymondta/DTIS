@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Development Testing</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="node_modules/materialize-css/dist/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="unmanaged/vis-4.21.0/dist/vis.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+
+  <style type="text/css">
+    #mynetwork {
+      width: 1000px;
+      height: 600px;
+    }
+
+    header, main, footer {
+      padding-left: 300px;
+    }
+
+    @media only screen and (max-width : 992px) {
+      header, main, footer {
+        padding-left: 0;
+      }
+    }
+
+    .tap-target {
+      color: #fff;
+      a {
+        color: #fff;
+        text-decoration:underline;
+      }
+    }
+  </style>
+
+</head>
+<body>
+  <header>
+
+    <ul id="slide-out" class="side-nav fixed">
+      <li><div class="user-view">
+        <div class="background">
+          <img src="images/office.jpg">
+        </div>
+        <a href="#!user"><img class="circle" src="images/ray.jpg"></a>
+        <a href="#!name"><span class="white-text name">Raymond TA</span></a>
+        <a href="#!email"><span class="white-text email">raymond.ta@pwc.ca</span></a>
+      </div></li>
+      <li><a href="#!"><i class="material-icons">web</i>Flowchart</a></li>
+      <li><div class="divider"></div></li>
+      <li><a href="#!"><i class="material-icons">playlist_add_check</i>Assembly Floor Sheet</a></li>
+      <li><a href="#!"><i class="material-icons">security</i>Config DADs</a></li>
+      <li><a href="#!"><i class="material-icons">check_circle</i>Quality DADs</a></li>
+      <li><a href="#!"><i class="material-icons">book</i>Configurations</a></li>
+      <li><a class="waves-effect waves-light modal-trigger" href="#modalHardwareBuild"><i class="material-icons">flight_takeoff</i>Hardware Builds</a></li>
+      <li><a class="waves-effect waves-light modal-trigger" href="#modalTDBD"><i class="material-icons">storage</i>Top Down Break Down</a></li>
+      <li><a href="#!"><i class="material-icons">schedule</i>Schedule</a></li>
+      <li><a href="#!"><i class="material-icons">3d_rotation</i>Load from Enovia</a></li>
+      <li><a href="#!"><i class="material-icons">archive</i>Load from ECATES</a></li>
+      <li><a id="help" href="#!"><i class="material-icons">archive</i>Help</a></li>
+    </ul>
+    <!--<a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>  -->
+
+    <nav class="light-blue lighten-1" role="navigation">
+      <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">Development Testing</a>
+        <ul class="right hide-on-med-and-down">
+          <li><a href="sass.html"><i class="material-icons">search</i></a></li>
+          <li><a href="badges.html"><i class="material-icons">view_module</i></a></li>
+          <li><a href="collapsible.html"><i class="material-icons">refresh</i></a></li>
+          <li><a href="mobile.html"><i class="material-icons">more_vert</i></a></li>
+        </ul>
+        <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+      </div>
+    </nav>
+    <nav> 
+      <div class="nav-wrapper">
+        <div class="col s12">
+          <a href="#!" class="breadcrumb">PT800</a>
+          <a href="#!" class="breadcrumb">Build 123</a>
+          <a href="#!" class="breadcrumb">Config 456</a>
+        </div>
+      </div>
+    </nav>
+
+  </header>
+
+  <main>
+    <div class="section no-pad-bot" id="index-banner">
+      <div class="row">
+        <div class="col s8">
+          <div id="mynetwork"></div>
+          <a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">add</i></a>
+        </div>
+        <div class="col s4">
+          <ul class="collapsible" data-collapsible="accordion">
+            <li>
+              <div class="collapsible-header">
+                <i class="material-icons">filter_drama</i>
+                First
+                <span class="new badge">4</span></div>
+              <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+            </li>
+            <li>
+              <div class="collapsible-header">
+                <i class="material-icons">place</i>
+                Second
+                <span class="badge">1</span></div>
+              <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+            </li>
+          </ul>
+
+          <div class="card">
+            <div class="card-image">
+              <img src="images/pw1100.jpg">
+              <span class="card-title">Card Title</span>
+            </div>
+            <div class="card-content">
+              <p>I am a very simple card. I am good at containing small bits of information.
+              I am convenient because I require little markup to use effectively.</p>
+            </div>
+            <div class="card-action">
+              <a href="#">This is a link</a>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="fixed-action-btn horizontal click-to-toggle">
+          <a id="menu" class="btn-floating btn-large blue">
+            <i class="material-icons">menu</i>
+          </a>
+          <ul>
+            <li><a class="btn-floating red"><i class="material-icons">insert_chart</i></a></li>
+            <li><a class="btn-floating yellow darken-1"><i class="material-icons">format_quote</i></a></li>
+            <li><a class="btn-floating green"><i class="material-icons">publish</i></a></li>
+            <li><a class="btn-floating blue"><i class="material-icons">attach_file</i></a></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+
+
+    <div class="container">
+      <div class="section">
+
+        <!--   Icon Section   -->
+        <div class="row">
+          <div class="col s12 m4">
+            <div class="icon-block">
+              <h2 class="center light-blue-text"><i class="material-icons">flash_on</i></h2>
+              <h5 class="center">Speeds up development</h5>
+
+              <p class="light">We did most of the heavy lifting for you to provide a default stylings that incorporate our custom components. Additionally, we refined animations and transitions to provide a smoother experience for developers.</p>
+            </div>
+          </div>
+
+          <div class="col s12 m4">
+            <div class="icon-block">
+              <h2 class="center light-blue-text"><i class="material-icons">group</i></h2>
+              <h5 class="center">User Experience Focused</h5>
+
+              <p class="light">By utilizing elements and principles of Material Design, we were able to create a framework that incorporates components and animations that provide more feedback to users. Additionally, a single underlying responsive system across all platforms allow for a more unified user experience.</p>
+            </div>
+          </div>
+
+          <div class="col s12 m4">
+            <div class="icon-block">
+              <h2 class="center light-blue-text"><i class="material-icons">settings</i></h2>
+              <h5 class="center">Easy to work with</h5>
+
+              <p class="light">We have provided detailed documentation as well as specific code examples to help new users get started. We are also always open to feedback and can answer any questions a user may have about Materialize.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <br><br>
+    </div>
+
+
+    <div id="modalTDBD" class="modal">
+      <div class="modal-content">
+        <h4>Top Down Break Downs</h4>
+        <table>
+          <thead>
+            <tr>
+                <th>Name</th>
+                <th>Item Name</th>
+                <th>Item Price</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td>Alvin</td>
+              <td>Eclair</td>
+              <td>$0.87</td>
+            </tr>
+            <tr>
+              <td>Alan</td>
+              <td>Jellybean</td>
+              <td>$3.76</td>
+            </tr>
+            <tr>
+              <td>Jonathan</td>
+              <td>Lollipop</td>
+              <td>$7.00</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="modal-footer">
+        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+      </div>
+    </div>
+
+    <div id="modalHardwareBuild" class="modal bottom-sheet">
+      <div class="modal-content">
+        <h4>Hardware Builds</h4>
+        <div class="row">
+          <div class="col s6">
+            <table>
+              <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Item Name</th>
+                    <th>Item Price</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <td>Alvin</td>
+                  <td>Eclair</td>
+                  <td>$0.87</td>
+                </tr>
+                <tr>
+                  <td>Alan</td>
+                  <td>Jellybean</td>
+                  <td>$3.76</td>
+                </tr>
+                <tr>
+                  <td>Jonathan</td>
+                  <td>Lollipop</td>
+                  <td>$7.00</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="col s6">
+            <table>
+              <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Item Name</th>
+                    <th>Item Price</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <td>Alvin</td>
+                  <td>Eclair</td>
+                  <td>$0.87</td>
+                </tr>
+                <tr>
+                  <td>Alan</td>
+                  <td>Jellybean</td>
+                  <td>$3.76</td>
+                </tr>
+                <tr>
+                  <td>Jonathan</td>
+                  <td>Lollipop</td>
+                  <td>$7.00</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+      </div>
+    </div>
+
+    <div class="tap-target teal lighten-3" data-activates="menu">
+      <div class="tap-target-content">
+        <h5>Title</h5>
+        <p>A bunch of text</p>
+      </div>
+    </div>
+  </main>
+
+
+  <footer class="page-footer orange">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Company Bio</h5>
+          <p class="grey-text text-lighten-4">We are a team of college students working on this project like it's our full time job. Any amount would help support and continue development on this project and is greatly appreciated.</p>
+
+
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Settings</h5>
+          <ul>
+            <li><a class="white-text" href="#!">Link 1</a></li>
+            <li><a class="white-text" href="#!">Link 2</a></li>
+            <li><a class="white-text" href="#!">Link 3</a></li>
+            <li><a class="white-text" href="#!">Link 4</a></li>
+          </ul>
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Connect</h5>
+          <ul>
+            <li><a class="white-text" href="#!">Link 1</a></li>
+            <li><a class="white-text" href="#!">Link 2</a></li>
+            <li><a class="white-text" href="#!">Link 3</a></li>
+            <li><a class="white-text" href="#!">Link 4</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      Made by <a class="orange-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+      </div>
+    </div>
+  </footer>
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="node_modules/materialize-css/dist/js/materialize.js"></script>
+  <script src="js/init.js"></script>
+  <script src="node_modules/hammerjs/hammer.min.js"></script>
+  <script src="js/vis.js"></script>
+
+  <script type="text/javascript">
+    var nodes = [
+      { id: 100, label: 'This node has no fixed, minimum or maximum width or height', x: -50, y: -300 },
+      { id: 210, widthConstraint: { minimum: 120 }, label: 'This node has a mimimum width', x: -400, y: -200 },
+      { id: 211, widthConstraint: { minimum: 120 }, label: '...so does this', x: -500, y: -50 },
+      { id: 220, widthConstraint: { maximum: 170 }, label: 'This node has a maximum width and breaks have been automatically inserted into the label', x: -150, y: -150 },
+      { id: 221, widthConstraint: { maximum: 170 }, label: '...this too', x: -100, y: 0 },
+      { id: 200, font: { multi: true }, widthConstraint: 150, label: '<b>This</b> node has a fixed width and breaks have been automatically inserted into the label', x: -300, y: 50 },
+      { id: 201, widthConstraint: 150, label: '...this as well', x: -300, y: 200 },
+      { id: 300, heightConstraint: { minimum: 70 }, label: 'This node\nhas a\nminimum\nheight', x: 100, y: -150 },
+      { id: 301, heightConstraint: { minimum: 70 }, label: '...this one here too', x: 100, y: 0 },
+      { id: 400, heightConstraint: { minimum: 100, valign: 'top' }, label: 'Minimum height\nvertical alignment\nmay be top', x: 300, y: -200 },
+      { id: 401, heightConstraint: { minimum: 100, valign: 'middle' }, label: 'Minimum height\nvertical alignment\nmay be middle\n(default)', x: 300, y: 0 },
+      { id: 402, heightConstraint: { minimum: 100, valign: 'bottom' }, label: 'Minimum height\nvertical alignment\nmay be bottom', x: 300, y: 200 }
+    ];
+
+    var edges = [
+      { from: 100, to: 210, label: "unconstrained to minimum width"},
+      { from: 210, to: 211, label: "more minimum width"},
+      { from: 100, to: 220, label: "unconstrained to maximum width"},
+      { from: 220, to: 221, label: "more maximum width"},
+      { from: 210, to: 200, label: "minimum width to fixed width"},
+      { from: 220, to: 200, label: "maximum width to fixed width"},
+      { from: 200, to: 201, label: "more fixed width"},
+      { from: 100, to: 300, label: "unconstrained to minimum height"},
+      { from: 300, to: 301, label: "more minimum height"},
+      { from: 100, to: 400, label: "unconstrained to top valign"},
+      { from: 400, to: 401, label: "top valign to middle valign"},
+      { from: 401, to: 402, widthConstraint: { maximum: 150 }, label: "middle valign to bottom valign"},
+    ];
+
+    var container = document.getElementById('mynetwork');
+    var data = {
+      nodes: nodes,
+      edges: edges
+    };
+    var options = {
+      edges: {
+        font: {
+          size: 12
+        },
+        widthConstraint: {
+          maximum: 90
+        }
+      },
+      nodes: {
+        shape: 'box',
+        margin: 10,
+        widthConstraint: {
+          maximum: 200
+        }
+      },
+      physics: {
+        enabled: false
+      }
+    };
+    var network = new vis.Network(container, data, options);
+  </script>
+
+  <script>
+    $(document).ready(function(){
+      // the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
+      $('.modal').modal();
+
+      $("#help").click(function(){
+        console.log()
+        $('.tap-target').tapTarget('open');
+      });
+    });     
+  </script>
+  </body>
+</html>
